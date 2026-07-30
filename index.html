@@ -4,77 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>itsketii - Site Web Personnel</title>
+    <title>itsketii — Portfolio</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 
+    <!-- Attention : le nom doit correspondre EXACTEMENT au fichier CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
         <div class="container navbar-flex">
-            <a class="navbar-brand" href="#acceuil">itsketii</a>
+            <a class="navbar-brand" href="#accueil">itsketii<span class="brand-dot">.</span></a>
 
             <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
 
-            <label for="navToggle" class="navbaer-toggler" aria-label="Toggle navigation">
+            <label for="navToggle" class="navbar-toggler" aria-label="Ouvrir le menu">
                 <i class="bi bi-list"></i>
             </label>
 
+            <!-- Menu desktop : mêmes 5 liens, mêmes id, que le menu mobile -->
             <ul class="navbar-nav ms-auto nav-pills-custom d-none d-lg-flex">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#acceuil">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#a-propos">À propos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
+                <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
 
             <div class="mobile-menu">
                 <div class="mobile-menu-header">
-                    <span clann="mobile-menu-brand">itsketii</span>
-                    <label for="navTogglz" class="btn-close-custom" arial-label="close menu">
-                        <i class="bi bi-w-lg"></i>
+                    <span class="mobile-menu-brand">itsketii<span class="brand-dot">.</span></span>
+                    <label for="navToggle" class="btn-close-custom" aria-label="Fermer le menu">
+                        <i class="bi bi-x-lg"></i>
                     </label>
                 </div>
                 <ul class="mobile-nav-list">
-                    <li class="nav-item">
-                        <a class="nva-link active" href="#acceuil">Acceuil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#a-propos">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#competences">Compétences</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projets">Projets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
             <label for="navToggle" class="mobile-menu-backdrop" aria-hidden="true"></label>
         </div>
     </nav>
 
-
+    <!-- ===================== HERO / ACCUEIL ===================== -->
     <header id="accueil" class="hero-section">
         <div class="container">
             <div class="row align-items-center gy-5">
-
                 <div class="col-lg-6 order-2 order-lg-1 hero-anim hero-anim-1">
                     <p class="hero-greeting">Bonjour <span class="wave">👋</span></p>
                     <p class="hero-subtitle">Je suis</p>
@@ -100,6 +86,7 @@
         </div>
     </header>
 
+    <!-- ===================== A PROPOS ===================== -->
     <section id="apropos" class="section-apropos">
         <div class="container">
             <div class="text-center mb-5">
@@ -108,7 +95,6 @@
             </div>
 
             <div class="row align-items-center gy-4 apropos-row">
-
                 <div class="col-lg-4 order-2 order-lg-1 text-lg-end">
                     <p class="apropos-text">
                         Étudiante passionnée par le développement web et le design graphique.
@@ -141,6 +127,7 @@
         </div>
     </section>
 
+    <!-- ===================== COMPETENCES ===================== -->
     <section id="competences" class="section-competences">
         <div class="container">
             <div class="text-center mb-5">
@@ -153,7 +140,7 @@
                 <div class="col">
                     <div class="skill-card">
                         <div class="skill-card-img">
-                            <img src="URL_IMAGE.jpg" alt="Développement Web">
+                            <img src="URL_IMAGE_DEV.jpg" alt="Développement Web">
                         </div>
                         <div class="skill-card-overlay">
                             <h3>Développement Web</h3>
@@ -166,11 +153,11 @@
                 <div class="col">
                     <div class="skill-card">
                         <div class="skill-card-img">
-                            <img src="URL_IMAGE.jpg" alt="Développement Web">
+                            <img src="URL_IMAGE_DESIGN.jpg" alt="Design Graphique">
                         </div>
                         <div class="skill-card-overlay">
-                            <h3>Développement Web</h3>
-                            <p>HTML, CSS, JavaScript, Bootstrap</p>
+                            <h3>Design Graphique</h3>
+                            <p>Figma, Photoshop, Illustrator, Canva</p>
                             <a href="#" class="btn btn-skill-more">En savoir plus</a>
                         </div>
                     </div>
@@ -179,11 +166,11 @@
                 <div class="col">
                     <div class="skill-card">
                         <div class="skill-card-img">
-                            <img src="URL_IMAGE.jpg" alt="Développement Web">
+                            <img src="URL_IMAGE_MARKETING.jpg" alt="Marketing Digital">
                         </div>
                         <div class="skill-card-overlay">
-                            <h3>Développement Web</h3>
-                            <p>HTML, CSS, JavaScript, Bootstrap</p>
+                            <h3>Marketing Digital</h3>
+                            <p>SEO, Google Analytics, Réseaux sociaux</p>
                             <a href="#" class="btn btn-skill-more">En savoir plus</a>
                         </div>
                     </div>
@@ -192,23 +179,81 @@
                 <div class="col">
                     <div class="skill-card">
                         <div class="skill-card-img">
-                            <img src="URL_IMAGE.jpg" alt="Développement Web">
+                            <img src="URL_IMAGE_GESTION.jpg" alt="Gestion de Projet">
                         </div>
                         <div class="skill-card-overlay">
-                            <h3>Développement Web</h3>
-                            <p>HTML, CSS, JavaScript, Bootstrap</p>
+                            <h3>Gestion de Projet</h3>
+                            <p>Travail d'équipe, Organisation, Méthode Agile</p>
                             <a href="#" class="btn btn-skill-more">En savoir plus</a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ===================== PROJETS (carousel 100% CSS) ===================== -->
+    <section id="projets" class="section-projets">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-eyebrow">Ce que j'ai construit</p>
+                <h2 class="section-title">Projets</h2>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+            <div class="peek-track">
+
+                <div class="peek-card" id="slide-portfolio">
+                    <a href="#slide-resto" class="card-arrow card-arrow-prev" aria-label="Projet précédent"><i
+                            class="bi bi-chevron-left"></i></a>
+                    <img src="URL_IMAGE_1.jpg" alt="Portfolio Personnel">
+                    <div class="peek-card-body">
+                        <h3>Portfolio Personnel</h3>
+                        <p>Site vitrine one-page conçu avec Bootstrap 5.</p>
+                        <a href="#" class="btn btn-project-more">Voir le projet</a>
+                    </div>
+                    <a href="#slide-todo" class="card-arrow card-arrow-next" aria-label="Projet suivant"><i
+                            class="bi bi-chevron-right"></i></a>
+                </div>
+
+                <div class="peek-card" id="slide-todo">
+                    <a href="#slide-portfolio" class="card-arrow card-arrow-prev" aria-label="Projet précédent"><i
+                            class="bi bi-chevron-left"></i></a>
+                    <img src="URL_IMAGE_2.jpg" alt="Application ToDo">
+                    <div class="peek-card-body">
+                        <h3>Application ToDo</h3>
+                        <p>Gestion de tâches en JavaScript.</p>
+                        <a href="#" class="btn btn-project-more">Voir le projet</a>
+                    </div>
+                    <a href="#slide-resto" class="card-arrow card-arrow-next" aria-label="Projet suivant"><i
+                            class="bi bi-chevron-right"></i></a>
+                </div>
+
+                <div class="peek-card" id="slide-resto">
+                    <a href="#slide-todo" class="card-arrow card-arrow-prev" aria-label="Projet précédent"><i
+                            class="bi bi-chevron-left"></i></a>
+                    <img src="URL_IMAGE_3.jpg" alt="Site Restaurant">
+                    <div class="peek-card-body">
+                        <h3>Site Restaurant</h3>
+                        <p>Menu interactif et réservation.</p>
+                        <a href="#" class="btn btn-project-more">Voir le projet</a>
+                    </div>
+                    <a href="#slide-portfolio" class="card-arrow card-arrow-next" aria-label="Projet suivant"><i
+                            class="bi bi-chevron-right"></i></a>
+                </div>
+
+            </div>
+
+            <div class="peek-dots">
+                <a href="#slide-portfolio" class="peek-dot" aria-label="Aller au projet 1"></a>
+                <a href="#slide-todo" class="peek-dot" aria-label="Aller au projet 2"></a>
+                <a href="#slide-resto" class="peek-dot" aria-label="Aller au projet 3"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections Contact + Footer : on les fait à l'étape 8 et 9 -->
+
 </body>
 
 </html>
