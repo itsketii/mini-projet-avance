@@ -1,200 +1,331 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kety - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kety - Portfolio</title>
 
-    <!-- Bootstrap CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Mon CSS personnel -->
-    <link href="style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg custom-navbar py-2">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#accueil">
+        <img src="images/logo.png" alt="Logo Kety" class="navbar-logo">
+      </a>
 
-            <a class="navbar-brand" href="#accueil">Kety</a>
+      <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+      <label for="navToggle" class="navbar-toggler-custom" aria-label="Ouvrir le menu">
+        <i class="bi bi-list"></i>
+      </label>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+      <ul class="nav nav-pills ms-auto d-none d-lg-flex nav-pills-custom" id="desktopNav">
+        <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <span class="fw-bold fs-5"><img src="images/logo.png" alt="Logo Kety" class="navbar-logo"></span>
+          <label for="navToggle" class="btn-close-custom" aria-label="Fermer le menu">
+            <i class="bi bi-x-lg"></i>
+          </label>
+        </div>
+        <ul class="nav flex-column mobile-nav-list" id="mobileNav">
+          <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <label for="navToggle" class="mobile-menu-backdrop" aria-hidden="true"></label>
+    </div>
+  </nav>
+
+  <!-- ===== ACCUEIL ===== -->
+  <header id="accueil" class="header-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 order-2 order-lg-1 reveal">
+          <p class="header-greeting">Bonjour, je suis</p>
+          <h1 class="header-title">Kety Kouadio</h1>
+          <p class="header-role">Étudiante en Informatique et Génie Logiciel</p>
+          <p class="header-text mb-4">
+            Étudiante à l'IIT Grand-Bassam, passionnée par le développement web et mobile,
+            j'aime construire des interfaces modernes et responsives.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#projets" class="btn btn-rose-solid rounded-pill px-4 py-3">Voir mes projets</a>
+            <a href="#contact" class="btn btn-rose-outline rounded-pill px-4 py-3">Me contacter</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 reveal reveal-2">
+          <div class="header-photo-wrapper">
+            <div class="header-photo-ring"></div>
+            <div class="header-photo-placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== A PROPOS ===== -->
+  <section id="apropos">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 reveal">À propos</h2>
+      <div class="row align-items-center apropos-row">
+        <div class="col-md-4 text-center mb-4 mb-md-0 reveal">
+          <div class="apropos-photo-wrapper"></div>
+        </div>
+        <div class="col-md-8 reveal reveal-2">
+          <p class="apropos-text">
+            Je suis étudiante en première année d'Informatique et Génie Logiciel à l'Institut Ivoirien de Technologie.
+            Je m'intéresse au développement web et mobile, et j'apprends actuellement Flutter, Python et le développement front-end.
+            Je suis curieuse, motivée et j'aime relever de nouveaux défis techniques.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPETENCES ===== -->
+  <section id="competences">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 reveal">Compétences</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3 reveal reveal-1">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Flutter / Dart</h5>
+              <p class="card-text">Développement mobile</p>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- ACCUEIL -->
-    <header id="accueil" class="text-center text-white py-5">
-        <div class="container py-5">
-            <h1 class="display-4 fw-bold">Kety Kouadio</h1>
-            <p class="lead">Étudiante en Informatique et Génie Logiciel - IIT Grand-Bassam</p>
-        </div>
-    </header>
-
-    <!-- A PROPOS -->
-    <section id="apropos" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">À propos</h2>
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="images/pp.jpg" alt="Photo de profil de Kety" class="placeholder-photo mx-auto">
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Je suis étudiante en première année d'Informatique et Génie Logiciel à l'Institut Ivoirien de
-                        Technologie.
-                        Je m'intéresse au développement web et mobile, et j'apprends actuellement Flutter, Python et le
-                        développement front-end.
-                        Je suis curieuse, motivée et j'aime relever de nouveaux défis techniques.
-                    </p>
-                </div>
+        <div class="col-6 col-md-3 reveal reveal-2">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Algorithmique</p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- COMPETENCES -->
-    <section id="competences" class="py-5 section-alt">
-        <div class="container">
-            <h2 class="text-center mb-5">Compétences</h2>
-            <div class="row g-4">
-                <div class="col-6 col-md-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Flutter / Dart</h5>
-                            <p class="card-text">Développement mobile</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Python</h5>
-                            <p class="card-text">Algorithmique</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">HTML / CSS</h5>
-                            <p class="card-text">Intégration web</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Java / C</h5>
-                            <p class="card-text">Programmation</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-6 col-md-3 reveal reveal-3">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">HTML / CSS</h5>
+              <p class="card-text">Intégration web</p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- PROJETS -->
-    <section id="projets" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Projets</h2>
-            <div id="carouselProjets" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card mx-auto projet-card">
-                            <div class="card-body">
-                                <h5 class="card-title">MonBudgetÉtudiant</h5>
-                                <p class="card-text">Application mobile Flutter pour gérer son budget d'étudiant au
-                                    quotidien.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card mx-auto projet-card">
-                            <div class="card-body">
-                                <h5 class="card-title">OrientCI</h5>
-                                <p class="card-text">Application mobile pour la gestion transparente de l'affectation
-                                    des enseignants.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card mx-auto projet-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Business Game IIT</h5>
-                                <p class="card-text">Projet réalisé lors du concours interne IIT, terminé 1ère place.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjets"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjets"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+        <div class="col-6 col-md-3 reveal reveal-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Java / C</h5>
+              <p class="card-text">Programmation</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-5 section-alt">
-        <div class="container">
-            <h2 class="text-center mb-5">Contact</h2>
-            <form class="mx-auto contact-form needs-validation" novalidate>
-                <div class="mb-3">
-                    <label class="form-label" for="nom">Nom</label>
-                    <input type="text" class="form-control" id="nom" required>
-                    <div class="invalid-feedback">Merci d'entrer votre nom.</div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="email">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                    <div class="invalid-feedback">Merci d'entrer un email valide.</div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                    <div class="invalid-feedback">Merci d'écrire un message.</div>
-                </div>
-                <button type="submit" class="btn btn-violet">Envoyer</button>
-            </form>
+  <!-- ===== PROJETS ===== -->
+  <section id="projets">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 reveal">Projets</h2>
+
+      <div class="peek-carousel reveal reveal-2" id="projetsCarousel">
+
+        <button type="button" class="card-arrow-global nav-prev" aria-label="Projet précédent">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <div class="peek-track">
+
+          <div class="peek-card" data-slide="budget">
+            <div class="peek-card-media" style="background: linear-gradient(135deg, #ff4fa3, #5b1f9e);"></div>
+            <div class="peek-card-overlay">
+              <h3>MonBudgetÉtudiant</h3>
+              <p>Application mobile Flutter pour gérer son budget d'étudiant au quotidien.</p>
+            </div>
+          </div>
+
+          <div class="peek-card" data-slide="orientci">
+            <div class="peek-card-media" style="background: linear-gradient(135deg, #7b3fe4, #2a1246);"></div>
+            <div class="peek-card-overlay">
+              <h3>OrientCI</h3>
+              <p>Application mobile pour la gestion transparente de l'affectation des enseignants.</p>
+            </div>
+          </div>
+
+          <div class="peek-card" data-slide="business">
+            <div class="peek-card-media" style="background: linear-gradient(135deg, #ff6ec7, #7b3fe4);"></div>
+            <div class="peek-card-overlay">
+              <h3>Business Game IIT</h3>
+              <p>Projet réalisé lors du concours interne IIT, terminé 1ère place.</p>
+            </div>
+          </div>
+
         </div>
-    </section>
 
-    <footer class="text-center py-3">
-        <p class="mb-0">&copy; 2026 Kety Kouadio</p>
-    </footer>
+        <button type="button" class="card-arrow-global nav-next" aria-label="Projet suivant">
+          <i class="bi bi-chevron-right"></i>
+        </button>
 
-    <!-- Bootstrap JS via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      </div>
+    </div>
+  </section>
 
-    <!-- Validation Bootstrap simple -->
-    <script>
-        const forms = document.querySelectorAll('.needs-validation');
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-                event.preventDefault();
-                event.stopPropagation();
-                form.classList.add('was-validated');
-            });
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 reveal">Contact</h2>
+      <div class="contact-card reveal reveal-2">
+        <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label class="form-label" for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" required>
+            <div class="invalid-feedback">Merci d'entrer votre nom.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Merci d'entrer un email valide.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+            <div class="invalid-feedback">Merci d'écrire un message.</div>
+          </div>
+          <button type="submit" class="btn btn-rose-solid w-100 rounded-pill py-3">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="text-center py-5">
+    <div class="container">
+      <p class="fw-semibold mb-3">Autres réseaux</p>
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <a href="https://www.linkedin.com/in/itsketii" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/itsketii" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://twitter.com/itsketii" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/itsketii" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:ketsia.kouadio@iit.ci" class="social-icon" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+      <p class="fw-bold mb-1">Kety<span class="brand-dot">.</span></p>
+      <p class="small mb-0">&copy; 2026 Kety Kouadio</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ===== VALIDATION FORMULAIRE =====
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated');
+      });
+    });
+
+    // ===== NAVBAR ACTIVE LINK (scroll spy) =====
+    const sections = document.querySelectorAll('section, header');
+    const navLinksDesktop = document.querySelectorAll('#desktopNav .nav-link');
+    const navLinksMobile = document.querySelectorAll('#mobileNav .nav-link');
+
+    function updateActiveLink() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinksDesktop.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+
+      navLinksMobile.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    window.addEventListener('load', updateActiveLink);
+
+    // ===== FERMER MENU MOBILE APRÈS CLIC =====
+    const mobileLinks = document.querySelectorAll('#mobileNav .nav-link');
+    const toggleCheckbox = document.getElementById('navToggle');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        toggleCheckbox.checked = false;
+      });
+    });
+
+    // ===== CARROUSEL PROJETS (JS, sans lien ancre -> pas de saut de page) =====
+    const carousel = document.getElementById('projetsCarousel');
+    if (carousel) {
+      const cards = Array.from(carousel.querySelectorAll('.peek-card'));
+      const prevBtn = carousel.querySelector('.nav-prev');
+      const nextBtn = carousel.querySelector('.nav-next');
+      let activeIndex = 0;
+
+      function renderCarousel() {
+        const total = cards.length;
+        cards.forEach((card, i) => {
+          card.classList.remove('is-active', 'is-prev', 'is-next');
+          if (i === activeIndex) {
+            card.classList.add('is-active');
+          } else if (i === (activeIndex - 1 + total) % total) {
+            card.classList.add('is-prev');
+          } else if (i === (activeIndex + 1) % total) {
+            card.classList.add('is-next');
+          }
         });
-    </script>
-</body>
+      }
 
+      prevBtn.addEventListener('click', () => {
+        activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+        renderCarousel();
+      });
+      nextBtn.addEventListener('click', () => {
+        activeIndex = (activeIndex + 1) % cards.length;
+        renderCarousel();
+      });
+
+      renderCarousel();
+    }
+
+    // ===== APPARITION AU SCROLL (IntersectionObserver) =====
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
 </html>
