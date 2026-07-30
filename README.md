@@ -17,21 +17,22 @@ Dans le cadre de la formation IIT Learn 25-26, ce dépot contient le mini-projet
 
 * [X] Créer le depot GitHub personnel
 * [X] Inviter les collaborateurs sur le dépot
-* [ ] Intégrer Bootsrap via son CDN
-* [ ] Conctruire une navbar Bootsrap responsive
-* [ ] Section "À propos"
-* [ ] Section "Compétences"
-* [ ] Section "Projets"
-* [ ] Section "Contact"
-* [ ] Ajouter un fichier style.css personnel
-* [ ] Vérifier le rendu
-* [ ] Committer et pousser
+* [X] Intégrer Bootsrap via son CDN
+* [X] Conctruire une navbar Bootsrap responsive
+* [X] Section "À propos"
+* [X] Section "Compétences"
+* [X] Section "Projets"
+* [X] Section "Contact"
+* [X] Ajouter un fichier style.css personnel
+* [X] Vérifier le rendu
+* [X] Committer et pousser
 
 ---
 
 ### Configuration du projet
 
 ##### 1. Clonage du projet
+
 ```bash
 git clone https://github.com/[pseudo]/mini-projet-git-binome.git
 cd mini-projet-git-binome
