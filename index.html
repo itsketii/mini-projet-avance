@@ -28,7 +28,7 @@
                 <i class="bi bi-list"></i>
             </label>
 
-            <ul class="nav nav-pills ms-auto d-none d-lg-flex">
+            <ul class="nav nav-pills ms-auto d-none d-lg-flex nav-pills-custom">
                 <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
@@ -94,7 +94,8 @@
 
             <div class="row align-items-center gy-4 apropos-row">
                 <div class="col-lg-4 order-2 order-lg-1 text-lg-end">
-                    <p class="text-body-secondary mb-3">Étudiante passionnée par le développement.</p>
+                    <p class="text-body-secondary mb-3">Étudiante passionnée par le développement web et le design
+                        graphique.</p>
                     <p class="text-body-secondary">J'aime créer des interfaces modernes, intuitives et responsives.</p>
                 </div>
 
@@ -197,46 +198,52 @@
                 <h2 class="section-title">Projets</h2>
             </div>
 
-            <div class="peek-track">
+            <div class="peek-carousel">
 
-                <div class="peek-card card border-0 shadow-sm" id="slide-portfolio">
-                    <a href="#slide-resto" class="card-arrow card-arrow-prev" aria-label="Projet précédent"><i
-                            class="bi bi-chevron-left"></i></a>
-                    <img src="URL_IMAGE_1.jpg" class="card-img-top peek-card-img" alt="Portfolio Personnel">
-                    <div class="card-body">
-                        <h3 class="h5">Portfolio Personnel</h3>
-                        <p class="text-body-secondary small">Site vitrine one-page conçu avec Bootstrap 5.</p>
-                        <a href="#" class="btn btn-dark btn-sm rounded-pill btn-lift">Voir le projet</a>
+                <a href="#slide-resto" class="card-arrow-global nav-prev nav-for-portfolio"
+                    aria-label="Projet précédent"><i class="bi bi-chevron-left"></i></a>
+                <a href="#slide-portfolio" class="card-arrow-global nav-prev nav-for-todo"
+                    aria-label="Projet précédent"><i class="bi bi-chevron-left"></i></a>
+                <a href="#slide-todo" class="card-arrow-global nav-prev nav-for-resto"
+                    aria-label="Projet précédent"><i class="bi bi-chevron-left"></i></a>
+
+                <div class="peek-track">
+
+                    <div class="peek-card card border-0 shadow-sm" id="slide-portfolio">
+                        <img src="URL_IMAGE_1.jpg" class="card-img-top peek-card-img" alt="Portfolio Personnel">
+                        <div class="card-body">
+                            <h3 class="h5">Portfolio Personnel</h3>
+                            <p class="text-body-secondary small">Site vitrine one-page conçu avec Bootstrap 5.</p>
+                            <a href="#" class="btn btn-dark btn-sm rounded-pill btn-lift">Voir le projet</a>
+                        </div>
                     </div>
-                    <a href="#slide-todo" class="card-arrow card-arrow-next" aria-label="Projet suivant"><i
-                            class="bi bi-chevron-right"></i></a>
+
+                    <div class="peek-card card border-0 shadow-sm" id="slide-todo">
+                        <img src="URL_IMAGE_2.jpg" class="card-img-top peek-card-img" alt="Application ToDo">
+                        <div class="card-body">
+                            <h3 class="h5">Application ToDo</h3>
+                            <p class="text-body-secondary small">Gestion de tâches en JavaScript.</p>
+                            <a href="#" class="btn btn-dark btn-sm rounded-pill btn-lift">Voir le projet</a>
+                        </div>
+                    </div>
+
+                    <div class="peek-card card border-0 shadow-sm" id="slide-resto">
+                        <img src="URL_IMAGE_3.jpg" class="card-img-top peek-card-img" alt="Site Restaurant">
+                        <div class="card-body">
+                            <h3 class="h5">Site Restaurant</h3>
+                            <p class="text-body-secondary small">Menu interactif et réservation.</p>
+                            <a href="#" class="btn btn-dark btn-sm rounded-pill btn-lift">Voir le projet</a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="peek-card card border-0 shadow-sm" id="slide-todo">
-                    <a href="#slide-portfolio" class="card-arrow card-arrow-prev" aria-label="Projet précédent"><i
-                            class="bi bi-chevron-left"></i></a>
-                    <img src="URL_IMAGE_2.jpg" class="card-img-top peek-card-img" alt="Application ToDo">
-                    <div class="card-body">
-                        <h3 class="h5">Application ToDo</h3>
-                        <p class="text-body-secondary small">Gestion de tâches en JavaScript.</p>
-                        <a href="#" class="btn btn-dark btn-sm rounded-pill btn-lift">Voir le projet</a>
-                    </div>
-                    <a href="#slide-resto" class="card-arrow card-arrow-next" aria-label="Projet suivant"><i
-                            class="bi bi-chevron-right"></i></a>
-                </div>
-
-                <div class="peek-card card border-0 shadow-sm" id="slide-resto">
-                    <a href="#slide-todo" class="card-arrow card-arrow-prev" aria-label="Projet précédent"><i
-                            class="bi bi-chevron-left"></i></a>
-                    <img src="URL_IMAGE_3.jpg" class="card-img-top peek-card-img" alt="Site Restaurant">
-                    <div class="card-body">
-                        <h3 class="h5">Site Restaurant</h3>
-                        <p class="text-body-secondary small">Menu interactif et réservation.</p>
-                        <a href="#" class="btn btn-dark btn-sm rounded-pill btn-lift">Voir le projet</a>
-                    </div>
-                    <a href="#slide-portfolio" class="card-arrow card-arrow-next" aria-label="Projet suivant"><i
-                            class="bi bi-chevron-right"></i></a>
-                </div>
+                <a href="#slide-todo" class="card-arrow-global nav-next nav-for-portfolio"
+                    aria-label="Projet suivant"><i class="bi bi-chevron-right"></i></a>
+                <a href="#slide-resto" class="card-arrow-global nav-next nav-for-todo"
+                    aria-label="Projet suivant"><i class="bi bi-chevron-right"></i></a>
+                <a href="#slide-portfolio" class="card-arrow-global nav-next nav-for-resto"
+                    aria-label="Projet suivant"><i class="bi bi-chevron-right"></i></a>
 
             </div>
 
