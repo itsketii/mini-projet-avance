@@ -279,6 +279,148 @@ header {
 }
 
 
+.section-apropos {
+  background-color: var(--cream);
+}
+
+.apropos-photo-wrapper {
+  width: 240px;
+  max-width: 70%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 3px solid var(--violet);
+  margin: 0 auto;
+}
+
+.apropos-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-med);
+}
+
+.apropos-photo-wrapper:hover .apropos-photo {
+  transform: scale(1.06);
+}
+
+.apropos-text {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin-bottom: 1.1rem;
+}
+
+.apropos-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.badge-custom {
+  background-color: var(--cream-light);
+  color: var(--ink);
+  border: 1.5px solid var(--violet);
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.badge-custom:hover {
+  background-color: var(--violet);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.section-competences {
+  background-color: var(--cream-dark);
+}
+
+.skill-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 3 / 4;
+  transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.skill-card-img {
+  position: absolute;
+  inset: 0;
+}
+
+.skill-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-med);
+}
+
+.skill-card:hover .skill-card-img img {
+  transform: scale(1.1);
+}
+
+.skill-card-overlay {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  background: rgba(250, 245, 236, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.skill-card-overlay h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.skill-card-overlay p {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.btn-skill-more {
+  background-color: var(--ink);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.btn-skill-more:hover {
+  background-color: var(--rose-sombre);
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 991.98px) {
+  .apropos-row .text-lg-end {
+    text-align: center !important;
+  }
+  .apropos-badges {
+    justify-content: center;
+  }
+}
+
 
 
 @keyframes fadeInUp {
