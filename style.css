@@ -1,26 +1,26 @@
-:root {
-  --violet: #7b6195;
-  --rose: #dc94c1;
-  --violet-sombre: #6b476b;
-  --rose-sombre: #ae3e90;
-  --noir: #181418;
-
-  --cream: #f3e9da;
-  --cream-light: #faf5ec;
-  --cream-dark: #e9dcc6;
-
-  --ink: #1f2d3d;
-  --ink-soft: #2c3e50;
-
-  --radius-lg: 28px;
-  --radius-md: 18px;
-  --radius-sm: 12px;
-  --radius-pill: 999px;
-
-  --shadow-soft: 0 10px 30px rgba(24, 20, 24, 0.08);
-  --shadow-hover: 0 18px 40px rgba(24, 20, 24, 0.14);
-
-  --transition-fast: 0.25s ease;
-  --transition-med: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+body {
+  font-family:"Segoe UI", sans-serif;
+  background-color: #0e0b14;
+  color: #f3e6f7;
 }
 
+.navbar {
+  background-color: #1a1225;
+}
+
+h1, h2, h3 {
+  color: #ff6ec7;
+  font-weight: 700;
+}
+
+.card {
+  background-color: #1e1530;
+  border: 1px solid #5b1f9e;
+  border-radius: 12px;
+}
+
+.btn-violet {
+  background-color: #ff4fa3;
+  color: #ffffff;
+  border: none;
+}
