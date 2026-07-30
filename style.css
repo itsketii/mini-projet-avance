@@ -8,6 +8,14 @@ body {
   background-color: #1a1225;
 }
 
+header#acceuil {
+  background: linear-gradient(135deg, #ff4fa3, #5b1f9e, #0e0b14);
+}
+
+.section-alt {
+  background-color: #170f22;
+}
+
 h1, h2, h3 {
   color: #ff6ec7;
   font-weight: 700;
@@ -17,10 +25,60 @@ h1, h2, h3 {
   background-color: #1e1530;
   border: 1px solid #5b1f9e;
   border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(255, 79, 163, 0.25);
+  padding: 0.5rem;
+  color: #f3e6f7;
+}
+
+.card-title {
+  color: #ff9ed9;
+}
+
+placeholder-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #2a1246;
+  border: 3px solid #ff6ec7;
+}
+
+.projet-card {
+  max-width: 500px;
+}
+
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form label {
+  color: #f3e6f7;
+}
+
+.form-control {
+  background-color: #1e1530;
+  border: 1px solid #5b1f9e;
+  color: #f3e6f7;
+}
+
+.form-control:focus {
+  background-color: #1e1530;
+  border-color: #ff6ec7;
+  color: #f3e6f7;
+  box-shadow: 0 0 0 0.2rem rgba(255, 110, 199, 0.25);
 }
 
 .btn-violet {
   background-color: #ff4fa3;
   color: #ffffff;
   border: none;
+}
+
+.btn-violet:hover {
+  background-color: #c9328a;
+  color: #fff;
+}
+
+footer {
+  background-color: #1a1225;
+  color: #ff9ed9;
 }
