@@ -16,7 +16,9 @@ header#accueil {
   background-color: #170f22;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #ff6ec7;
   font-weight: 700;
 }
@@ -40,6 +42,8 @@ h1, h2, h3 {
   border-radius: 50%;
   background-color: #2a1246;
   border: 3px solid #ff6ec7;
+  object-fit: cover;
+  display: block;
 }
 
 .projet-card {
