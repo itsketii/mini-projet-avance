@@ -34,8 +34,8 @@ Dans le cadre de la formation IIT Learn 25-26, ce dépot contient le mini-projet
 ##### 1. Clonage du projet
 
 ```bash
-git clone https://github.com/[pseudo]/mini-projet-git-binome.git
-cd mini-projet-git-binome
+git clone https://github.com/itsketii/mini-projet-avance
+cd mini-projet-git-avance
 ```
 
 ---
